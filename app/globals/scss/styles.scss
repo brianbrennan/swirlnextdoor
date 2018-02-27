@@ -4,11 +4,12 @@
 
 //----------------------Fonts
 
-@import url('https://fonts.googleapis.com/css?family=Bitter:400i|Merriweather|Oswald:600');
+@import url('https://fonts.googleapis.com/css?family=Bitter:400i|Merriweather|Oswald:600|Pacifico');
 
 $bitter: 'Bitter', serif;
 $merriweather: 'Merriweather', serif;
 $oswald: 'Oswald', sans-serif;
+$pacifico: 'Pacifico', serif;
 
 //----------------------Colors
 
@@ -23,13 +24,43 @@ body {
 	background-color: $lightGrey;
 }
 
+//----------------------Home Top
+
+.snd-home-top {
+	text-align: center;
+	margin-bottom: 45px;
+
+	.snd-site-title {
+		font-family: $pacifico;
+		color: $pink;
+		margin-bottom: 15px;
+	}
+
+	.snd-biography {
+		color: $grey;
+		font-family: $merriweather;
+	}
+}
 
 //----------------------Instafeed
 
 .instafeed {
 	.instapost {
+		margin-bottom: 30px;
+
 		img {
 			max-width: 100%;
 		}
 	}
+}
+
+//---------------------Main Footer
+
+.snd-main-footer {
+	background-color: $grey;
+	color: white;
+	font-family: $oswald;
+	min-height: 200px;
+	padding-top: 60px;
+	padding-bottom: 60px;
 }

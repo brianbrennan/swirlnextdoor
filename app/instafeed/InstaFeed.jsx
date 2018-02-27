@@ -1,13 +1,14 @@
 import React from 'react';
 
-import { getInstaPosts } from './instagram-manager.js';
+import { getInstaPosts, buildPostUrl } from './instagram-manager.js';
 
 export default class InstaFeed extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            instaPosts: []
+            instaPosts: [],
+            instaPostRefs: []
         }
     }
 
@@ -23,7 +24,9 @@ export default class InstaFeed extends React.Component {
             return (
                 <div className="instapost col-lg-4 col-xs-12"
                      key={instaPost.id}>
-                    <img src={instaPost.thumbnail}/>
+                    <a href={buildPostUrl(instaPost)}>
+                        <img src={instaPost.thumbnail}/>
+                    </a>
                 </div>
             );
         });

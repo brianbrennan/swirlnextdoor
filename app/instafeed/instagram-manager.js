@@ -28,11 +28,25 @@ export function getInstaPosts() {
             instaData.media.nodes.forEach(function(instaPost) {
                 currentInstaPost = {
                     id: instaPost.id,
-                    thumbnail: instaPost.thumbnail_src
+                    thumbnail: instaPost.thumbnail_src,
+                    code: instaPost.code
                 };
                 instaPosts.push(currentInstaPost);
             });
 
             return instaPosts;
         });
+}
+
+export function getBiography() {
+    return getInstagramData()
+        .then(function(instaData) {
+            return instaData.biography; 
+        });
+}
+
+export function buildPostUrl(instaPost) {
+    let code = instaPost.code;
+
+    return 'https://instagram.com/p/' + code;
 }
