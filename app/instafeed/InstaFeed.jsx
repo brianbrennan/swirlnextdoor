@@ -20,16 +20,16 @@ export default class InstaFeed extends React.Component {
 
     render() {
         let instaPostElements = this.state.instaPosts.map((instaPost) => {
-            console.log(instaPost);
             return (
-                <div className="instapost" key={instaPost.id}>
-                    <img src={instaPost.thumbnail} alt=""/>
+                <div className="instapost col-lg-4 col-xs-12"
+                     key={instaPost.id}>
+                    <img src={instaPost.thumbnail}/>
                 </div>
             );
         });
         
         return (
-            <section className="instafeed">
+            <section className="instafeed container">
                 {instaPostElements}
             </section>
         );

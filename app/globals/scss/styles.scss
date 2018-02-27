@@ -1,0 +1,35 @@
+/*
+	Global Styles for Swirl Next Door
+*/
+
+//----------------------Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Bitter:400i|Merriweather|Oswald:600');
+
+$bitter: 'Bitter', serif;
+$merriweather: 'Merriweather', serif;
+$oswald: 'Oswald', sans-serif;
+
+//----------------------Colors
+
+$pink: #FFC7C7;
+$lightPink: #FFE2E2;
+$lightGrey: #F6F6F6;
+$grey: #8785A2;
+
+//----------------------Styles
+
+body {
+	background-color: $lightGrey;
+}
+
+
+//----------------------Instafeed
+
+.instafeed {
+	.instapost {
+		img {
+			max-width: 100%;
+		}
+	}
+}
