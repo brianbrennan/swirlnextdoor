@@ -4,7 +4,8 @@
   "description": "A website for @swirlnextdoor",
   "main": "app/main/App.jsx",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "webpack-dev-server"
   },
   "author": "Brian Brennan",
   "license": "ISC",

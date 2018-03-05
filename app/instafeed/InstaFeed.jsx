@@ -26,6 +26,9 @@ export default class InstaFeed extends React.Component {
                      key={instaPost.id}>
                     <a href={buildPostUrl(instaPost)}>
                         <img src={instaPost.thumbnail}/>
+                        <div className="instapost-overlay">
+                            
+                        </div>
                     </a>
                 </div>
             );
