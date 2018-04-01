@@ -3,10 +3,19 @@ import objectPath from 'object-path';
 import Q from 'q';
 
 export function loadInstagramData() {
+    let hasProperData;
+
     return axios.get('https://www.instagram.com/swirlnextdoor/?__a=1')
         .then(function (response) {
-            localStorage.setItem('instafeed', JSON.stringify(objectPath.get(response, 'data.user')));
-            return objectPath.get(response, 'data.user');
+            hasProperData = objectPath.has(response, 'data.graphql.user');
+
+            console.log(response);
+            if(hasProperData) {
+                localStorage.setItem('instafeed', JSON.stringify(objectPath.get(response, 'data.graphql.user')));
+                return objectPath.get(response, 'data.user');
+            } else {
+                throw new Error('Something Went Wrong!');
+            }
         });
 }
 
